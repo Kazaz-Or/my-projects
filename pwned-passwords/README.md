@@ -9,8 +9,9 @@ python checkmypass.py <password#1> <password#2>
 
 see example output:
 ```
-python checkmypass.py password123 simplepass complicatedpassnooneprobablyuses                                                                                                         [18:02:07]
-
+python checkmypass.py password123 simplepass complicatedpassnooneprobablyuses
+```
+```
 password123 was found 248071 times... you should probably change your password!
 
 simplepass was found 748 times... you should probably change your password!
