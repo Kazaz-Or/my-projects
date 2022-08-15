@@ -1,0 +1,317 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="{% static 'app/public/styles.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-indigo-900 py-2 md:py-4 shadow-lg">
+    <div class="container px-4 md:flex md:items-center mx-auto">
+        <a href="#" class="font-bold text-xl text-white">AV-Data</a>
+    </div>
+    </nav>
+
+    <div class="bg-indigo-300">
+        <div class="text-4xl text-gray-800 font-medium">Just a Simple Learning Project 🧑🏻‍💻 </div>
+    </div>
+    <div class="bg-indigo-300">
+        <div class="text-xl text-gray-800 font-medium">Upload & visualise your data quickly with our reporting tool</div>
+    </div>
+
+    <div class="flex">
+        <div clas="w-1/2">
+            <div class="m-6 font-bold text-indigo-600 px-25">Upload CSV file</div>
+            <div class="container mx-auto w-full max-w-xs">
+                <form class="bg-gray-100 rounded px-25" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input class="inline-block m-6 font-bold text-sm text-blue-500" type="file" name="file" id="file">
+                    <input class="bg-blue-500 m-6 text-white font-bold py-2 px-4 rounded" type="submit" name="submit" id="">
+                </form>
+            </div>
+        </div>
+        <div clas="w-1/2"></div>
+    </div>
+   
+    <div class="m-6 container mx-auto font-bold text-indigo-600">Parsed Data</div>
+    <div class="container mx-auto flex">
+        <div class="flex flex-col">
+            <div>
+                <div class="border-b border-gray-200 shadow">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-2 text-sm text-gray-500">Propery Name</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Price</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Rent</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">EMI</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Tax</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Monthly Expense</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Net Expense</th>
+                                <th class="px-6 py-2 text-sm text-gray-500">Net Income</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for object in data_objects %}
+                            <tr>
+                                <td class="px-6 py-4 text-sm text-gray-500 font-bold">{{object.name}}</td>
+                                <td class="px-6 py-4 text-sm text-green-500">{{object.price}}</td>
+                                <td class="px-6 py-4 text-sm text-green-500">{{object.rent}}</td>
+                                <td class="px-6 py-4 text-sm text-red-500">{{object.emi}}</td>
+                                <td class="px-6 py-4 text-sm text-red-500">{{object.tax}}</td>
+                                <td class="px-6 py-4 text-sm text-red-500">{{object.exp}}</td>
+                                <td class="px-6 py-4 text-sm text-red-500">{{object.expenses_monthly}}</td>
+                                <td class="px-6 py-4 text-sm text-green-500">{{object.income_monthly}}</td>
+                            </tr>
+                            {% endfor %}
+                            <tr>
+                                <td class="px-6 py-4 text-sm text-gray-500 font-bold">Total</td>
+                                <td id="total-price" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-rent" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-emi" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-tax" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-exp" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-expense" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                                <td id="total-income" class="px-6 py-4 text-sm text-gray-500 font-bold">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex gap-8 m-10">
+        <div class="w-1/2">
+            <div class="text-indigo-600 font-bold m-10">Income Chart</div>
+            <div>
+                <canvas id="income-chart" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <div class="w-1/2">
+            <div class="text-indigo-600 font-bold m-10">Expense Chart</div>
+            <div>
+                <canvas id="expense-chart" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex gap-8 m-10">
+        <div class="w-1/2">
+            <div class="text-indigo-600 font-bold m-10">Expense Spread Chart</div>
+            <div>
+                <canvas id="expense-spread-chart" width="200" height="200"></canvas>
+            </div>
+        </div>
+        <div class="w-1/2">
+            <div class="text-indigo-600 font-bold m-10">Income Spread Chart</div>
+            <div>
+                <canvas id="income-spread-chart" width="200" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        table = document.getElementById("table")
+        let net_prices, net_rent, net_emi, net_tax, net_exp, net_monthly_expense = 0;
+        let total_prices = 0, total_rent = 0, total_emi = 0, total_tax = 0, total_monthly_expenses = 0, total_monthly_income = 0, total_exp = 0;
+        let net_incomes = []
+        let property = ""
+        let properties = []
+        let net_monthly_expenses = []
+        let net_emis = []
+        let net_taxes = []
+        let net_expenses = []
+
+        for(let i = 1; i < table.rows.length - 1; i++){
+            net_prices = table.rows[i].cells[1].innerText;
+            net_rent = table.rows[i].cells[2].innerText;
+            net_emi = table.rows[i].cells[3].innerText;
+            net_tax = table.rows[i].cells[4].innerText;
+            net_exp = table.rows[i].cells[5].innerText;
+            net_monthly_expense = table.rows[i].cells[6].innerText;
+            net_income = table.rows[i].cells[7].innerText;
+            property = table.rows[i].cells[0].innerText;
+
+            net_incomes.push(net_income)
+            properties.push(property)
+            net_monthly_expenses.push(net_monthly_expense)
+            net_emis.push(net_emi)
+            net_taxes.push(net_tax)
+            net_expenses.push(net_exp)
+
+            net_prices = parseInt(net_prices)
+            net_rent = parseInt(net_rent)
+            net_emi = parseInt(net_emi)
+            net_tax = parseInt(net_tax)
+            net_exp = parseInt(net_exp)
+            net_monthly_expense = parseInt(net_monthly_expense)
+            net_income = parseInt(net_income)
+
+            total_prices += net_prices;
+            total_rent += net_rent;
+            total_emi += net_emi;
+            total_tax += net_tax;
+            total_exp += net_exp;
+            total_monthly_income += net_income;
+            total_monthly_expenses += net_monthly_expense
+        };
+        document.getElementById("total-price").innerHTML = total_prices;
+        document.getElementById("total-rent").innerHTML = total_rent;
+        document.getElementById("total-emi").innerHTML = total_emi;
+        document.getElementById("total-tax").innerHTML = total_tax;
+        document.getElementById("total-exp").innerHTML = total_exp;
+        document.getElementById("total-expense").innerHTML = total_monthly_expenses;
+        document.getElementById("total-income").innerHTML = total_monthly_income;
+
+        const ctx = document.getElementById('income-chart').getContext('2d');
+        const incomeChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: properties,
+                datasets: [{
+                    label: 'Income in USD',
+                    data: net_incomes,
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx2 = document.getElementById('expense-chart').getContext('2d');
+        const expenseChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: properties,
+                datasets: [{
+                    label: 'Expense in USD',
+                    data: net_monthly_expenses,
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx3 = document.getElementById('expense-spread-chart').getContext('2d');
+        const expenseSpreadChart = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: properties,
+                datasets: [{
+                    label: 'Monthly EMI',
+                    data: net_emis,
+                    backgroundColor: [
+                    'rgba(255, 206, 86, 1)',
+
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 1
+                }, {
+                    label: 'Monthly Tax',
+                    data: net_taxes,
+                    backgroundColor: [
+                    'rgba(153, 102, 255, 1)',
+
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 1
+                }, {
+                    label: 'Monthly Other Expenses',
+                    data: net_expenses,
+                    backgroundColor: [
+                    'rgba(255, 159, 64, 1)',
+
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const ctx4 = document.getElementById('income-spread-chart').getContext('2d');
+        const incomeSpreadChart = new Chart(ctx4, {
+            type: 'pie',
+            data: {
+                labels: properties,
+                datasets: [{
+                    label: 'Income in USD',
+                    data: net_incomes,
+                    backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                    ],
+                    borderColor: [
+              
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
