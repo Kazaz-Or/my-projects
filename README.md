@@ -14,7 +14,7 @@
 ## Frameworks & Libraries
 
 - Django
-- Pillow (Python Image Library)
+- Pillow
 - sqlite
 - Tailwind
 - Charts.js
