@@ -1,7 +1,7 @@
 # My Automation Projects
 
 <p align="center">
-<p>This is repo for the small projects i completed while trying to maintin continuous learning attitue</p>
+<p>This is repo for the small projects i completed while trying to maintin continuous learning attitude</p>
 
 
 # What's in this repo:
