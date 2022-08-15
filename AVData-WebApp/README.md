@@ -13,7 +13,7 @@ The app will also perform some calculations on the given data and yield the resu
 
 <h3> HL Architecture </h3>
 
-Backend written using Django & sqlite as a database, Frontend includes Django Templates, Tailwind CSS & Charts.js
+Backend written using Django & sqlite as a database and pandas for handling CSV, Frontend includes Django Templates, Tailwind CSS & Charts.js
 
 ![0A9F57A0-F1B8-4110-8AF9-BBB471EA99E7](https://user-images.githubusercontent.com/83350680/184653104-356e0e79-e43e-43b5-8499-f4986c15959f.jpeg)
 
