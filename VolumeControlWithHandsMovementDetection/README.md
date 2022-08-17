@@ -1,0 +1,1 @@
+Simple python script that allows you to control your PC's volume by detecting your hands movement from your webcam.
