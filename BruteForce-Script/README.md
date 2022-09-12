@@ -1,5 +1,9 @@
+A simple script that tries to brute force a password out from a list with passwords.
 
 
+example of usage:
+
+```
 python bruteforce.py   
      
 [+] Enter Page URL: github.com
@@ -11,3 +15,4 @@ Trying: ThisIsAFakeRockYouList:)
 
 [+] Found Username: ==> myusername
 [+] Found Password: ==> ThisIsAFakeRockYouList:)
+```
