@@ -20,7 +20,7 @@ print(f"Scanning started at: {str(datetime.now())}")
 print("-" * 50)
 
 try:
-    for port in range(1, max_port):
+    for port in range(1, max_port + 1):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         socket.setdefaulttimeout(1)
 
