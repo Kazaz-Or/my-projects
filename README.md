@@ -13,6 +13,7 @@
 - [AWS-S3-Using-Python](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/AWS-S3-WithPython) Some simple scripts using boto3 to work and manipluate AWS S3 buckets using Python
 - [Port Scanner](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/port-scanner) Simple script that scans for open ports on a specified target IP
 - [WebApp Directories Discovery](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/WebApp-DirectoryDiscovery) Simple script that scans for existing directories (directory listing) out of a list
+- [Brute-Force Script](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/BruteForce-Script) Simple script that tries to brute force a password out of a file with password list
 
 
 ## Frameworks & Libraries
