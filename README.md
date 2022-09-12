@@ -11,6 +11,7 @@
 - [pwned-passwords](https://github.com/Kazaz-Or/my-projects/tree/develop/pwned-passwords) Simple script that checks if the passwords provided by the user have been pwned
 - [VolumeControlWithHandsMovementDetection](https://github.com/Kazaz-Or/my-projects/tree/develop/VolumeControlWithHandsMovementDetection) A simple script that detects your hands movement via webcam and control the volume of your pc accordingly
 - [AWS-S3-Using-Python](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/AWS-S3-WithPython) Some simple scripts using boto3 to work and manipluate AWS S3 buckets using Python
+- [Port Scanner](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/port-scanner) Simple script that scans for open ports on a specified target IP
 
 
 ## Frameworks & Libraries
