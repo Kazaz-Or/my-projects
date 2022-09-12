@@ -26,3 +26,4 @@
 - OpenCV
 - MediaPipe
 - boto3
+- socket
