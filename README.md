@@ -14,6 +14,7 @@
 - [Port Scanner](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/port-scanner) Simple script that scans for open ports on a specified target IP
 - [WebApp Directories Discovery](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/WebApp-DirectoryDiscovery) Simple script that scans for existing directories (directory listing) out of a list
 - [Brute-Force Script](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/BruteForce-Script) Simple script that tries to brute force a password out of a file with password list
+- [Brithday Reminder App Using React and WebDriverIO](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/BirthdayReminderReactApp/brithday-reminder-app) A very small app created with React for learning purposes and experimenting with WDIO. 
 
 
 ## Frameworks & Libraries
@@ -30,3 +31,5 @@
 - MediaPipe
 - boto3
 - socket
+- React
+- WDIO
