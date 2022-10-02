@@ -1,4 +1,5 @@
-<p>A simple python tool built with tkinter to run as a desktop application and perform monitoring to your PC's spec (CPU & MEM) & Performs a simple speed test.</p>
+<p>A simple python tool built with tkinter to run as a desktop application and perform some basic monitoring to your PC's spec (CPU & MEM).
+In additon to that, it also performs a simple speed test.</p>
 
 <h3>Monitoring:</h3>
 
