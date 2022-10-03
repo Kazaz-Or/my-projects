@@ -9,7 +9,6 @@
 <h3>Learning Projects</h3>
 
 - [AVData-WebApp](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/AVData-WebApp) Analysis & Visualisation of property data from a formatted CSV file that is uploaded by the user
-- [PerformanceMonitor](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/PerformanceMonitor) A simple python tool built with tkinter to run as a desktop application and perform monitoring to your PC's spec (CPU & MEM) & Performs a simple speed test
 - [Brithday Reminder App Using React and WebDriverIO](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/BirthdayReminderReactApp/brithday-reminder-app) A very small app created with React for learning purposes and experimenting with WDIO. 
 
 <h3>Scripts</h3>
@@ -20,6 +19,7 @@
 - [Port Scanner](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/port-scanner) Simple script that scans for open ports on a specified target IP
 - [WebApp Directories Discovery](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/WebApp-DirectoryDiscovery) Simple script that scans for existing directories (directory listing) out of a list
 - [Brute-Force Script](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/BruteForce-Script) Simple script that tries to brute force a password out of a file with password list
+ - [PerformanceMonitor](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/PerformanceMonitor) A simple python tool built with tkinter to run as a desktop application and perform monitoring to your PC's spec (CPU & MEM) & Performs a simple speed test
 
 
 ## Frameworks & Libraries
