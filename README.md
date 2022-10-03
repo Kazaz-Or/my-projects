@@ -20,6 +20,7 @@
 - [WebApp Directories Discovery](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/WebApp-DirectoryDiscovery) Simple script that scans for existing directories (directory listing) out of a list
 - [Brute-Force Script](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/BruteForce-Script) Simple script that tries to brute force a password out of a file with password list
  - [PerformanceMonitor](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/PerformanceMonitor) A simple python tool built with tkinter to run as a desktop application and perform monitoring to your PC's spec (CPU & MEM) & Performs a simple speed test
+ - [Chat Room App](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/ChatRoomApp) Small chat room application that was created for the purpose of learning sockets and threading in python. GUI was built using Tkinter.
 
 
 ## Frameworks & Libraries
@@ -38,3 +39,5 @@
 - socket
 - React
 - WDIO
+- Scoket
+- Threading
