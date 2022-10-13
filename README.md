@@ -26,6 +26,9 @@
 ## Frameworks & Libraries
 
 - Django
+- FastAPI
+- Flask (flask, flask-restful, Flask JWT Extended)
+- SQLAlchemy (ORM)
 - Pillow
 - sqlite
 - Tailwind
