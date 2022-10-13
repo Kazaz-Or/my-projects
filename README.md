@@ -1,7 +1,7 @@
 # My Projects & Scripts
 
 <p align="center">
-<p>This is a repo for the small projects i completed while trying to maintin continuous learning attitude</p>
+<p>This is a repo for the projects i completed while trying to maintin continuous learning attitude</p>
 
 
 # What's the the repo:
