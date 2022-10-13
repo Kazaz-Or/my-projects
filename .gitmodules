@@ -1,3 +1,6 @@
 [submodule "projects/flask-backend-server"]
 	path = projects/flask-backend-server
 	url = https://github.com/Kazaz-Or/flask-backend-server
+[submodule "projects/fastapi-backend-server"]
+	path = projects/fastapi-backend-server
+	url = https://github.com/Kazaz-Or/fastapi-backend-restapi
