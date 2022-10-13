@@ -8,6 +8,7 @@
 
 <h3>Learning Projects</h3>
 
+- [FastAPI Backend Server] (https://github.com/Kazaz-Or/flask-backend-server/tree/8c6dfc285cf1a61a260fe90909a62a137c4ca2d5) Backend REST API service for a TODO application written with FastAPI
 - [AVData-WebApp](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/AVData-WebApp) Analysis & Visualisation of property data from a formatted CSV file that is uploaded by the user
 - [Brithday Reminder App Using React and WebDriverIO](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/BirthdayReminderReactApp/brithday-reminder-app) A very small app created with React for learning purposes and experimenting with WDIO. 
 
