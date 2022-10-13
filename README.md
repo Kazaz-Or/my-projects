@@ -31,6 +31,8 @@
 - FastAPI
 - Flask (flask, flask-restful, Flask JWT Extended)
 - SQLAlchemy (ORM)
+- SQLite3
+- OpenAPI
 - Pillow
 - sqlite
 - Tailwind
