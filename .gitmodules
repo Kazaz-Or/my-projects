@@ -1,0 +1,3 @@
+[submodule "projects/flask-backend-server"]
+	path = projects/flask-backend-server
+	url = https://github.com/Kazaz-Or/flask-backend-server
