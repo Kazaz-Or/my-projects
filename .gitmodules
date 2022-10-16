@@ -4,3 +4,6 @@
 [submodule "projects/fastapi-backend-server"]
 	path = projects/fastapi-backend-server
 	url = https://github.com/Kazaz-Or/fastapi-backend-restapi
+[submodule "projects/projects/django-backend-server"]
+	path = projects/projects/django-backend-server
+	url = https://github.com/Kazaz-Or/django-backend-server
