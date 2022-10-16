@@ -8,6 +8,7 @@
 
 <h3>Learning Projects</h3>
 
+- [Django Backend Server](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/django-backend-server) Backend REST API Service for a recipe Application.
 - [FastAPI Backend Server](https://github.com/Kazaz-Or/fastapi-backend-restapi/tree/e119c299424c5a9cfbb38d862c9b0cd8347b1184) Backend REST API service for a TODO application written with FastAPI
 - [Flask Backend Server](https://github.com/Kazaz-Or/flask-backend-server/tree/8c6dfc285cf1a61a260fe90909a62a137c4ca2d5) Backend REST API service written with Flask
 - [AVData-WebApp](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/AVData-WebApp) Analysis & Visualisation of property data from a formatted CSV file that is uploaded by the user
@@ -27,13 +28,15 @@
 
 ## Frameworks & Libraries
 
-- Django
+- Django (URL mappings, add-ons & django rest framework)
 - FastAPI
 - Flask (flask, flask-restful, Flask JWT Extended)
 - SQLAlchemy (ORM)
+- PostgreSQL
 - SQLite3
 - OpenAPI
-- Pillow
+- Docker & Docker configuration
+- GitHub Actions (includes testing & linting)
 - sqlite
 - Tailwind
 - Charts.js
