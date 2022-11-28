@@ -13,6 +13,8 @@
 - [Flask Backend Server](https://github.com/Kazaz-Or/flask-backend-server/tree/8c6dfc285cf1a61a260fe90909a62a137c4ca2d5) Backend REST API service written with Flask
 - [AVData-WebApp](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/AVData-WebApp) Analysis & Visualisation of property data from a formatted CSV file that is uploaded by the user
 - [Brithday Reminder App Using React and WebDriverIO](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/BirthdayReminderReactApp/brithday-reminder-app) A very small app created with React for learning purposes and experimenting with WDIO. 
+- [Async Tasks with Celery](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/projects/AsyncTasks) Learning demo of how to handle background tasks with Celery.
+
 
 <h3>Scripts</h3>
 
@@ -51,3 +53,5 @@
 - WDIO
 - Scoket
 - Threading
+- Falcon
+- Celery
