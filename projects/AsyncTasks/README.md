@@ -1,4 +1,4 @@
-# Asynchronous Tasks with Falcon, Celery & Flower
+# Asynchronous Tasks with Celery
 
 <h4>
 This small project was done with the goal of learning on how to handle Async tasks with Celery.
