@@ -53,5 +53,4 @@
 - WDIO
 - Scoket
 - Threading
-- Falcon
 - Celery
