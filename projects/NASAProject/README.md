@@ -33,3 +33,5 @@ To run any automated tests, run `npm test`. This will:
 - Express
 - MongoDB
 - Docker
+- Jest
+- Supertest
