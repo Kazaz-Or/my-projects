@@ -12,7 +12,7 @@ Frontend part was forked from another project and was added here just for the sa
 
 ## Running the Project
 
-1. In the terminal, run: `npm run deploy`
+1. In the terminal, run: `npm run deploy` or run `npm run deploy-cluster` to run it in clustering mode with maximum available logical CPUs.
 2. Browse to the mission control frontend at [localhost:8000](http://localhost:8000) and schedule an interstellar launch!
 
 ## Docker
