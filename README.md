@@ -29,29 +29,31 @@
  - [Chat Room App](https://github.com/Kazaz-Or/projects-and-scripts/tree/develop/scripts/ChatRoomApp) Small chat room application that was created for the purpose of learning sockets and threading in python. GUI was built using Tkinter.
 
 
+## Main Stack
+
+- Python
+- JavaScript / NodeJS
+
 ## Frameworks & Libraries
 
 - Django (URL mappings, add-ons & django rest framework)
 - FastAPI
 - Flask (flask, flask-restful, Flask JWT Extended)
+- Express
 - SQLAlchemy (ORM)
 - PostgreSQL
+- MongoDB
 - SQLite3
-- OpenAPI
-- Docker & Docker configuration
-- GitHub Actions (includes testing & linting)
-- sqlite
+- Docker & Docker Compose
+- GitHub Actions & Workflows (testing & linting)
 - Tailwind
-- Charts.js
-- Tkinter
-- psutil
-- requests
-- OpenCV
-- MediaPipe
-- boto3
-- socket
 - React
-- WDIO
-- Scoket
-- Threading
 - Celery
+
+## Testing
+
+- Pytest
+- unittest
+- WebDriverIO
+- Jest
+- Supertest
