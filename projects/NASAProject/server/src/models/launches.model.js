@@ -46,7 +46,7 @@ async function saveLaunch(launch) {
     });
 
     if (!planet) {
-        throw new Error('No matching planet was found');
+        return {error: 'No matching planet was found'};
     }
 
     await launches.findOneAndUpdate({
@@ -85,4 +85,5 @@ module.exports = {
     getAllLaunches,
     scheduleNewLaunch,
     abortLaunchById,
+    saveLaunch,
 };
