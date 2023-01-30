@@ -31,6 +31,15 @@ describe('Launches API', () => {
             .get('/api/v1/launches')
             expect(isValid)
         });
+        test('Happy path - response with limit', async () => {
+            const response = await request(app).get('/api/v1/launches?limit=10');
+            expect(response.statusCode).toBe(200);
+            expect(response.body.length).toEqual(10);
+
+            const response2 = await request(app).get('/api/v1/launches?limit=20');
+            expect(response2.statusCode).toBe(200);
+            expect(response2.body.length).toEqual(20);
+        });
     });
 
     describe('POST launches endpoint', () => {
