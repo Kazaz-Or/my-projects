@@ -18,17 +18,17 @@ describe('Launches API', () => {
 
     describe('GET launches endpoint', () => {
         test('Happy path - response 200', async () => {
-            const response = await request(app).get('/launches');
+            const response = await request(app).get('/api/v1/launches');
             expect(response.statusCode).toBe(200);
         });
         test('Happy path - Headers', async () => {
             await request(app)
-            .get('/launches')
+            .get('/api/v1/launches')
             .expect('Content-Type', /json/);
         });
         test('Happy path - response', async () => {
             await request(app)
-            .get('/launches')
+            .get('/api/v1/launches')
             expect(isValid)
         });
     });
@@ -36,13 +36,13 @@ describe('Launches API', () => {
     describe('POST launches endpoint', () => {
         test('Happy path - response 201', async () => {
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunch)
             .expect(201);
         });
         test('Happy path - response', async () => {
             const { body: response } = await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunch)
             .expect(201)
 
@@ -51,7 +51,7 @@ describe('Launches API', () => {
         });
         test('Happy path - Headers', async () => {
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunch)
             .expect('Content-Type', /json/);
         });
@@ -64,7 +64,7 @@ describe('Launches API', () => {
             let testLaunchMissingMissionProperty = {...testLaunch};
             delete testLaunchMissingMissionProperty.mission;
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunchMissingMissionProperty)
             .expect(400)
             .expect({"error":"Missing required launch property"});
@@ -73,7 +73,7 @@ describe('Launches API', () => {
             let testLaunchMissingMissionProperty = {...testLaunch};
             delete testLaunchMissingMissionProperty.rocket;
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunchMissingMissionProperty)
             .expect(400)
             .expect({"error":"Missing required launch property"});
@@ -82,28 +82,28 @@ describe('Launches API', () => {
             let testLaunchMissingMissionProperty = {...testLaunch};
             delete testLaunchMissingMissionProperty.target;
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunchMissingMissionProperty)
             .expect(400)
             .expect({"error":"Missing required launch property"});
         });
         test('Error Case - New Launch - Empty Payload', async () => {
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send({})
             .expect(400)
             .expect({"error":"Missing required launch property"});
         });
         test('Error Case - New Launch - Send Null', async () => {
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(null)
             .expect(400)
             .expect({"error":"Missing required launch property"});
         });
         test('Error Case - New Launch - Send undefined', async () => {
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(undefined)
             .expect(400)
             .expect({"error":"Missing required launch property"});
@@ -112,7 +112,7 @@ describe('Launches API', () => {
             let testLaunchInvalidDate = {...testLaunch};
             testLaunchInvalidDate.launchDate = "Invalid Date"
             await request(app)
-            .post('/launches')
+            .post('/api/v1/launches')
             .send(testLaunchInvalidDate)
             .expect(400)
             .expect({"error": "Invalid launch date"});
@@ -122,22 +122,22 @@ describe('Launches API', () => {
     describe('DELETE launches endpoint', () => {
         let id;
         beforeEach(async () => {
-            const {body: response} = await request(app).post('/launches').send(testLaunch)
+            const {body: response} = await request(app).post('/api/v1/launches').send(testLaunch)
             id = response.flightNumber;
         });
         test('Happy path - response 200', async () => {
             await request(app)
-            .delete(`/launches/${id}`)
+            .delete(`/api/v1/launches/${id}`)
             .expect(200);
         });
         test('Happy path - Headers', async () => {
             await request(app)
-            .delete(`/launches/${id}`)
+            .delete(`/api/v1/launches/${id}`)
             .expect('Content-Type', /json/);
         });
         test('Happy path - response', async () => {
             const { body: response } = await request(app)
-            .delete(`/launches/${id}`)
+            .delete(`/api/v1/launches/${id}`)
             .expect(200)
 
             expect(isValid)
@@ -146,7 +146,7 @@ describe('Launches API', () => {
         test('Error Case - Abort Launch - Invalid Launch Id', async () => {
             const randomNumber = Math.floor(Math.random() * (1020 - 1000 +1) + 1000);
             await request(app)
-            .delete(`/launches/${randomNumber}`)
+            .delete(`/api/v1/launches/${randomNumber}`)
             .expect(404)
             .expect({"error": "Launch not found"});
         });
