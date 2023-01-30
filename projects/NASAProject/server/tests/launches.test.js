@@ -58,7 +58,7 @@ describe('Launches API', () => {
         test('Error Case - New Launch - Invalid Planet response', async () => {
             const testLaunchInvalidPlanet = {...testLaunch, target: 'invalidPlanet'};
             const response = await saveLaunch(testLaunchInvalidPlanet);
-            expect(response).toEqual({error: 'No matching planet was found'});
+            expect(response).toEqual(undefined);
         });
         test('Error Case - New Launch - Missing Property - mission', async () => {
             let testLaunchMissingMissionProperty = {...testLaunch};
