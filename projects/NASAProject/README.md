@@ -28,7 +28,11 @@ To run any automated tests, run `npm test`. This will:
 * Run all the server-side tests: `npm test --prefix server` 
 
 
+![Project+Architectural+Diagram](https://user-images.githubusercontent.com/83350680/217457604-bb50514d-4870-44be-8330-a32b7384f2b0.png)
+
+
 <h3>Stack</h3>
+
 - NodeJS
 - Express
 - MongoDB
